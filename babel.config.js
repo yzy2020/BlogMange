@@ -1,5 +1,15 @@
 module.exports = {
   presets: [
-    '@vue/cli-plugin-babel/preset'
+    ['@vue/cli-plugin-babel/preset', {
+      'useBuiltIns': 'entry'
+    }]
+  ],
+  plugins: [
+    ['@babel/plugin-transform-runtime'],
+    ['import', {
+      'libraryName': 'ant-design-vue',
+      'libraryDirectory': 'es',
+      'style': 'css'
+    }]
   ]
 }
